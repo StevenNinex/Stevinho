@@ -1,0 +1,86 @@
+:root {
+  --bg-light: #f0f4f8;
+  --text-light: #333;
+  --bg-dark: #121212;
+  --text-dark: #eee;
+  --primary: #0077be;
+}
+
+
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  transition: background 0.4s, color 0.4s;
+}
+
+body.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+header {
+  background-color: var(--primary);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+section {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #eee;
+}
+
+body.dark footer {
+  background: #1e1e1e;
+}
+
+.projects .project {
+  background: white;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-left: 4px solid var(--primary);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+body.dark .projects .project {
+  background: #1e1e1e;
+  box-shadow: 0 2px 5px rgba(255,255,255,0.05);
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+}
+
+#toggle-mode {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+body.dark #toggle-mode {
+  background: #333;
+  color: #eee;
+}

@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     body.classList.toggle('dark');
     body.classList.toggle('light');
     toggle.textContent = body.classList.contains('dark')
-      ? '☀ Modo Claro'
-      : '🌙 Modo Oscuro';
+      ? 'Modo Claro'
+      : 'Modo Oscuro';
   });
 });
